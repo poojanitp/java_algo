@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        body {
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 10pt
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0pt 0pt 10pt
+        }
+
+        li,
+        table {
+            margin-top: 0pt;
+            margin-bottom: 10pt
+        }
+
+        h1 {
+            margin-top: 24pt;
+            margin-bottom: 6pt;
+            page-break-before: auto;
+            page-break-inside: avoid;
+            page-break-after: avoid;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 24pt;
+            font-weight: bold;
+            color: #000000
+        }
+
+        h2 {
+            margin-top: 18pt;
+            margin-bottom: 4pt;
+            page-break-before: auto;
+            page-break-inside: avoid;
+            page-break-after: avoid;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 18pt;
+            font-weight: bold;
+            color: #000000
+        }
+
+        h3 {
+            margin-top: 14pt;
+            margin-bottom: 4pt;
+            page-break-before: auto;
+            page-break-inside: avoid;
+            page-break-after: avoid;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 14pt;
+            font-weight: bold;
+            color: #000000
+        }
+
+        h4 {
+            margin-top: 12pt;
+            margin-bottom: 2pt;
+            page-break-before: auto;
+            page-break-inside: avoid;
+            page-break-after: avoid;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 12pt;
+            font-weight: bold;
+            font-style: normal;
+            color: #000000
+        }
+
+        h5 {
+            margin-top: 11pt;
+            margin-bottom: 2pt;
+            page-break-before: auto;
+            page-break-inside: avoid;
+            page-break-after: avoid;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 11pt;
+            font-weight: bold;
+            color: #000000
+        }
+
+        h6 {
+            margin-top: 10pt;
+            margin-bottom: 2pt;
+            page-break-before: auto;
+            page-break-inside: avoid;
+            page-break-after: avoid;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 10pt;
+            font-weight: bold;
+            color: #000000
+        }
+
+        .BalloonText {
+            margin-bottom: 0pt;
+            line-height: normal;
+            font-family: Tahoma;
+            font-size: 8pt
+        }
+
+        .BodyText {
+            margin-bottom: 7pt;
+            line-height: 115%;
+            font-family: Calibri
+        }
+
+        .Caption {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Arial
+        }
+
+        .Caption1 {
+            margin-top: 6pt;
+            margin-bottom: 6pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 12pt;
+            font-style: italic
+        }
+
+        .CommentSubject {
+            margin-bottom: 10pt;
+            line-height: normal;
+            font-family: Calibri;
+            font-weight: bold
+        }
+
+        .CommentText {
+            margin-bottom: 10pt;
+            line-height: normal;
+            font-family: Calibri
+        }
+
+        .Footer {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 9pt
+        }
+
+        .HTMLPreformatted {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: SimSun;
+            font-size: 12pt
+        }
+
+        .Header {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 9pt
+        }
+
+        .Heading {
+            margin-top: 12pt;
+            margin-bottom: 6pt;
+            page-break-after: avoid;
+            line-height: 115%;
+            font-family: 'Liberation Sans';
+            font-size: 14pt
+        }
+
+        .Index {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri
+        }
+
+        .List {
+            margin-bottom: 7pt;
+            line-height: 115%;
+            font-family: Calibri
+        }
+
+        .ListParagraph {
+            margin-left: 36pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri
+        }
+
+        .ListParagraph1 {
+            margin-left: 36pt;
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri
+        }
+
+        .Revision {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri
+        }
+
+        .Standard {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            widows: 0;
+            orphans: 0;
+            font-family: 'Liberation Serif';
+            font-size: 12pt
+        }
+
+        .Subtitle {
+            margin-top: 18pt;
+            margin-bottom: 4pt;
+            page-break-before: auto;
+            page-break-inside: avoid;
+            page-break-after: avoid;
+            line-height: 115%;
+            font-family: Georgia;
+            font-size: 24pt;
+            font-style: italic;
+            color: #666666
+        }
+
+        .TableContents {
+            margin-bottom: 10pt;
+            line-height: 115%;
+            font-family: Calibri
+        }
+
+        .TableHeading {
+            margin-bottom: 10pt;
+            text-align: center;
+            line-height: 115%;
+            font-family: Calibri;
+            font-weight: bold
+        }
+
+        .TableParagraph {
+            margin-bottom: 0pt;
+            line-height: normal;
+            widows: 0;
+            orphans: 0;
+            font-family: 'Times New Roman';
+            font-size: 11pt
+        }
+
+        .Title {
+            margin-top: 24pt;
+            margin-bottom: 6pt;
+            page-break-before: auto;
+            page-break-inside: avoid;
+            page-break-after: avoid;
+            line-height: 115%;
+            font-family: Calibri;
+            font-size: 36pt;
+            font-weight: bold
+        }
+
+        .normal0 {
+            margin-bottom: 10pt;
+            line-height: 115%
+        }
+
+        span.BalloonTextChar {
+            font-family: Tahoma;
+            font-size: 8pt
+        }
+
+        span.CommentReference {
+            font-size: 8pt
+        }
+
+        span.CommentSubjectChar {
+            font-family: Calibri;
+            font-weight: bold
+        }
+
+        span.CommentTextChar {
+            font-family: Calibri
+        }
+
+        span.WW8Num2z0 {
+            font-family: Arial;
+            font-size: 8pt
+        }
+
+        .awlist1 {
+            list-style: none;
+            counter-reset: awlistcounter3_1
+        }
+
+        .awlist1>li:before {
+            content: counter(awlistcounter3_1, lower-latin) ')';
+            counter-increment: awlistcounter3_1
+        }
+
+        .awlist2 {
+            list-style: none;
+            counter-reset: awlistcounter4_0
+        }
+
+        .awlist2>li:before {
+            content: counter(awlistcounter4_0, lower-latin) ')';
+            counter-increment: awlistcounter4_0
+        }
+
+        body {
+            margin: 0;
+            /* Reset default margin */
+            padding-bottom: 60px;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: lightgray;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="main-content" style="width:50%">
+    <p style="margin-bottom:0pt; line-height:normal"><img src="1713254643_sanctionletter-dfs-templet-1st-april-24-final/1713254643_sanctionletter-dfs-templet-1st-april-24-final-1.jpeg" width="762" height="129" alt=""></p>
+    <p style="margin-right:22.5pt; margin-left:18pt; margin-bottom:6px; text-align:center; line-height:normal; widows:0; orphans:0"><strong><span style="font-family:'Times New Roman'; ">${Letter.RENEWAL}</span></strong></p>
+    <p style="margin-right:22.5pt; margin-left:18pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"></p>
+    <table style="width:540.6pt; margin-left:11.55pt; margin-bottom:0pt; border-collapse:collapse">
+        <tr>
+            <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Application No:-</span><br><strong><span style="font-family:'Times New Roman'; "> ${Letter.DEAL_APPLICATION_FORM_NO}</span></strong></p>
+            </td>
+            <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                <p style="margin-right:22.5pt; margin-left:18pt; margin-bottom:0pt; text-align:right; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Date: ${Letter.BUSINESS_DATE}</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Deal No:-</span><strong><span style="font-family:'Times New Roman'; ">&nbsp; </span></strong><strong><span style="font-family:'Times New Roman'; ">${Letter.dealNo}</span></strong></p>
+            </td>
+            <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                <p style="margin-right:22.5pt; margin-left:18pt; margin-bottom:0pt; text-align:right; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">${Letter.old}</span></p>
+            </td>
+        </tr>
+    </table>
+    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+    <table style="width:541.8pt; margin-left:10.95pt; margin-bottom:0pt; border-collapse:collapse">
+        <tr style="height:10.8pt">
+            <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><strong><span style="font-family:'Times New Roman'; ">${Letter.CUSTOMER_NAME}</span></strong></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">${</span><strong><span style="font-family:'Times New Roman'; ">Letter.</span></strong><span style="font-family:'Times New Roman'">addressLine1}</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">${</span><strong><span style="font-family:'Times New Roman'; ">Letter.</span></strong><span style="font-family:'Times New Roman'">addressLine2}</span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">${</span><strong><span style="font-family:'Times New Roman'; ">Letter.</span></strong><span style="font-family:'Times New Roman'">addressLine3}</span><span style="font-family:'Times New Roman'">&nbsp;&nbsp; </span></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">${</span><strong><span style="font-family:'Times New Roman'; ">Letter.</span></strong><span style="font-family:'Times New Roman'">phone}</span></p>
+            </td>
+        </tr>
+    </table>
+    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0; margin-top: 2px;"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+    <p style="margin-right:22.5pt; margin-left:18pt; margin-bottom:0pt; text-align:center; line-height:normal; widows:0; orphans:0"><strong><span style="font-family:'Times New Roman'; ">KIND ATTN: ${</span></strong><strong><span style="font-family:'Times New Roman'; ">Letter.stk_hldr}</span></strong></p>
+    <table style="width:345.65pt; margin-left:207.1pt; margin-bottom:0pt; border-collapse:collapse">
+        <tr>
+            <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><strong><span style="font-family:'Times New Roman'; ">${</span></strong><strong><span style="font-family:'Times New Roman'; ">Letter.</span></strong><span style="font-family:'Times New Roman'">phone</span><strong><span style="font-family:'Times New Roman'; ">}</span></strong></p>
+            </td>
+        </tr>
+    </table>
+    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+    <table style="width:544pt; margin-left:10.35pt; margin-bottom:0pt; border-collapse:collapse">
+        <tr style="height:4.5pt">
+            <td colspan="2" style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Dear Sir/Madam,</span></p>
+            </td>
+        </tr>
+        <tr style="height:6.7pt">
+            <td colspan="2" style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><strong><span style="font-family:'Times New Roman'; ">&nbsp;</span></strong></p>
+            </td>
+        </tr>
+        <tr style="height:13.4pt">
+            <td colspan="2" style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><strong><span style="font-family:'Times New Roman'; ">Subject- </span></strong><span style="font-family:'Times New Roman'">&nbsp;</span><span style="font-family:'Times New Roman'">Sanction of Working Capital Facility against your application no. ${Letter.DEAL_APPLICATION_FORM_NO}</span>
+                    <span
+                        style="font-family:'Times New Roman'">&nbsp;&nbsp; </span><span style="font-family:'Times New Roman'">, approved on ${</span><span style="font-family:'Times New Roman'">Letter.DEAL_APPROVAL_DATE</span><span style="font-family:'Times New Roman'">}</span></p>
+            </td>
+        </tr>
+        <tr style="height:6.7pt">
+            <td colspan="2" style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><strong><span style="font-family:'Times New Roman'; ">&nbsp;</span></strong></p>
+            </td>
+        </tr>
+        <tr style="height:13.4pt">
+            <td colspan="2" style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">We are pleased to inform you that based on your application an INR working capital facility (&apos;Facility&apos;) has been sanctioned to you.</span></p>
+            </td>
+        </tr>
+        <tr style="height:6.7pt">
+            <td colspan="2" style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><strong><span style="font-family:'Times New Roman'; ">&nbsp;</span></strong></p>
+            </td>
+        </tr>
+        <tr style="height:53.7pt">
+            <td colspan="2" style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">We are enclosing the key terms and conditions of the Facility in this Sanction Letter (&apos;&apos;Sanction Letter&apos;&apos;). The detailed terms will be mentioned in the Master Facility Agreement and the Schedule of Terms. The Facility is subject to the terms and conditions mentioned in the Master Facility Agreement and the Schedule of Terms to be executed by you together with other Schedules contained thereunder and all the other Transaction Documents.</span></p>
+                <p
+                    style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><strong><span style="font-family:'Times New Roman'; ">&nbsp;</span></strong></p>
+            </td>
+        </tr>
+        <tr style="height:33.55pt">
+            <td colspan="2" style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">This letter is intended for your guidance and information. Any legal relationship will be evidenced by documentation. Please note that at such time the contents of this letter shall form an integral part and shall be read in conjunction the Master Facility Agreement, the Terms and Conditions and the Security Documentation. The terms as spelled in the Sanction letter do not constitute the complete set of terms and conditions. In case of any conflict, the detailed terms and conditions in Master Facility Agreement supersede the terms and conditions in this letter.</span></p>
+            </td>
+        </tr>
+        <tr style="height:6.7pt">
+            <td colspan="2" style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+            </td>
+        </tr>
+        <tr style="height:58.7pt">
+            <td colspan="2" style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                <p style="margin-bottom:0pt; text-align:justify; widows:0; orphans:0"><span style="font-family:'Times New Roman'">The Sanction Letter is sent to you in duplicate and you are requested to confirm in writing that the terms and conditions mentioned in the Sanction Letter are acceptable to you. Kindly sign and send the duplicate copy as an acknowledgment of your acceptance to InCred Financial Services Ltd. (Formerly known asKKR India Financial Services Limited),</span><strong><span style="font-family:'Times New Roman'; ">406, 4th Floor, Competent House, Middle Circle, F-block, Connaught Place, New Delhi -110001</span></strong></p>
+                <p
+                    style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">If you require any further clarification on the Sanctioned Facility, please feel free to call your Relationship Manager. Our team would be happy to assist you.</span></p>
+            </td>
+        </tr>
+        <tr style="height:6.7pt">
+            <td colspan="2" style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">We value your relationship with us and assure you of our best services.</span></p>
+            </td>
+        </tr>
+        <tr style="height:6.7pt">
+            <td colspan="2" style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+            </td>
+        </tr>
+        <tr style="height:35.95pt">
+            <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">For InCred Financial Services Ltd</span></p>
+                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Authorized Signatory</span></p>
+                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+            </td>
+            <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                <p style="margin-right:22.5pt; margin-bottom:0pt; text-indent:85pt; text-align:right; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">For </span><span style="font-family:'Times New Roman'">${</span><strong><span style="font-family:'Times New Roman'; ">Letter.CUSTOMER_NAME</span></strong><span style="font-family:'Times New Roman'">}</span></p>
+                <p
+                    style="margin-right:22.5pt; margin-bottom:0pt; text-indent:110pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; text-indent:110pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; text-align:right; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:'Times New Roman'">Authorized Signatory</span></p>
+            </td>
+        </tr>
+    </table>
+    <hr style="  border: 0;  border-top: 2px solid orange;  width: 560pt;  margin-left: 4pt;">
+    <div style="  padding-inline: 2rem;  margin-bottom: 10rem;  width: fit-content;  font-family: sans-serif;">
+        <p style="    margin-block: 4px;    line-height: normal;    widows: 0;    orphans: 0;    font-size: 16px;"><strong><span>INCRED FINANCIAL SERVICES LIMITED</span></strong></p>
+        <p style="    margin-block: 4px 12px;    line-height: normal;    widows: 0;    orphans: 0;    font-size: 14px;"><strong><span>(Formerly known as KKR India Financial Services Limited)</span></strong></p>
+        <div style="display: flex; gap: 32px">
+            <div>
+                <p style="font-size: 12px; margin: 0"><strong><span>Registered &amp; Corporate Office:</span></strong></p>
+                <p style="margin: 0; font-size: 12px; margin: 0"><span>Unit No. 1203, 12thFloor, BWing, The Capital,</span><br><span>Plot No C-70, G Block, Bandra Kurla Complex,</span><br><span>Mumbai, Maharashtra, India, 400051</span></p>
+            </div>
+            <div class="line" style="      width: 1px;      background-color: rgba(0, 0, 0, 0.4);      height: 50px;      align-self: center;      "></div>
+            <div>
+                <p style="font-size: 12px; margin: 0"><strong><span>Delhi Office:</span></strong></p>
+                <p style="font-size: 12px; margin: 0"><span>406, 4th Floor, Competent House</span><br><span>Middle Circle, F Block, Connaught</span><br><span>Place, New Delhi - 110001</span></p>
+            </div>
+            <div class="line" style="      width: 1px;      background-color: rgba(0, 0, 0, 0.4);      height: 50px;      align-self: center;      "></div>
+            <div>
+                <p style="font-size: 12px; margin: 0"><strong><span>CIN:</span></strong> U67190MH1995PLC360817</p>
+                <p style="font-size: 12px; margin: 0"><strong><span>Email:</span></strong> care@incred.com</p>
+                <p style="font-size: 12px; margin: 0"><strong><span>Contact:</span></strong> 1800-102-2192</p>
+                <p style="font-size: 12px; margin: 0"><strong><span>Website:</span></strong> www.incred.com</p>
+            </div>
+        </div>
+    </div><br style="page-break-before:always; clear:both; mso-break-type:section-break">
+    <div>
+        <p style="margin-right:22.5pt; margin-bottom:1.5rem; line-height:normal; widows:0; orphans:0; font-size:12pt"><strong><u><span style="font-family:'Times New Roman'; ">Annexure 1- Terms &amp; Conditions of the Sanctioned Facility</span></u></strong></p>
+        <table style="width:564.15pt; margin-right:9pt; margin-left:9pt; margin-bottom:1.5rem; border:0.75pt solid #000000; border-collapse:collapse; float:left">
+            <tr style="height:28.75pt">
+                <td style="border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <ol style="margin:0pt; padding-left:0pt">
+                        <li style="margin-right:22.5pt; margin-left:30.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0; padding-left:5.5pt; font-family:'Times New Roman'"> &nbsp; </li>
+                    </ol>
+                </td>
+                <td style="border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Facility</span></p>
+                </td>
+                <td style="border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Working Capital Facility</span></p>
+                </td>
+            </tr>
+            <tr style="height:21.1pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <ol start="2" style="margin:0pt; padding-left:0pt">
+                        <li style="margin-right:22.5pt; margin-left:30.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0; padding-left:5.5pt; font-family:'Times New Roman'"> &nbsp; </li>
+                    </ol>
+                </td>
+                <td style="border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Lender</span></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">InCred Financial Services Ltd. (&ldquo;InCred&rdquo;,&rdquo; InCred Finance&rdquo;)</span></p>
+                </td>
+            </tr>
+            <tr style="height:20.9pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <ol start="3" style="margin:0pt; padding-left:0pt">
+                        <li style="margin-right:22.5pt; margin-left:30.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0; padding-left:5.5pt; font-family:'Times New Roman'"> &nbsp; </li>
+                    </ol>
+                </td>
+                <td style="border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Borrower</span></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">${</span><span style="font-family:'Times New Roman'">Letter.CUSTOMER_NAME}</span></p>
+                </td>
+            </tr>
+            <tr style="height:26.65pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <ol start="4" style="margin:0pt; padding-left:0pt">
+                        <li style="margin-right:22.5pt; margin-left:30.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0; padding-left:5.5pt; font-family:'Times New Roman'"> &nbsp; </li>
+                    </ol>
+                </td>
+                <td style="border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Total Facility Amount</span></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">${Letter.loan_gross_amount}/- </span><span style="font-family:'Times New Roman'">(Rupees </span><span style="font-family:'Times New Roman'">${Letter.loan_gross_amount_w})(</span><span style="font-family:'Times New Roman'">Revolving limit)</span></p>
+                </td>
+            </tr>
+            <tr style="height:56.9pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <ol start="5" style="margin:0pt; padding-left:0pt">
+                        <li style="margin-right:22.5pt; margin-left:30.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0; padding-left:5.5pt; font-family:'Times New Roman'"> &nbsp; </li>
+                    </ol>
+                </td>
+                <td style="border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Suppliers/</span></p>
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Manufacturer/</span></p>
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">National Distributors for whichfacility can be utilized</span></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-bottom:0pt; text-align:justify; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                    <table style="width:358.45pt; margin-right:auto; margin-left:auto; margin-bottom:0pt; border:0.75pt solid #000000; border-collapse:collapse">
+                        <tr style="height:19.25pt">
+                            <td style="border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                            </td>
+                            <td colspan="3" style="border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">##band=AnchorLetter Maximum Credit Limit Allowed</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+                                <p style="text-align:justify; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Category of goods</span></p>
+                            </td>
+                            <td style="border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Anchor / OEM ( Supplier)</span></p>
+                                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                            </td>
+                            <td style="border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Rotational Limit</span></p>
+                                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">(Rs.)</span></p>
+                            </td>
+                            <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Adhoc Limit</span></p>
+                                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">(Rs.)</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">${industry_desc}</span></p>
+                            </td>
+                            <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span><span style="font-family:'Times New Roman'">${dealerDesc}</span></p>
+                            </td>
+                            <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">${amount}/-(</span><span style="font-family:'Times New Roman'">Rupees ${</span><span style="font-family:'Times New Roman'">amount_w})</span></p>
+                            </td>
+                            <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+                                <p style="text-align:justify; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p style="text-align:justify; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                    <p style="text-align:justify; widows:0; orphans:0"><span style="font-family:'Times New Roman'">The facility is made available for company as whole, without reference/Restriction to any particular division / unit of the company. Total combine outstanding amount of all the anchors should not exceed total Limit Amount.</span></p>
+                    <p
+                        style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">InCred reserves the right to fix such Internal limit within overall limit of Total Facility Amount at its sole discretion and on such terms and condition as InCred deem fit and proper.</span></p>
+                        <p
+                            style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                </td>
+            </tr>
+            <tr style="height:26.5pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <ol start="6" style="margin:0pt; padding-left:0pt">
+                        <li style="margin-right:22.5pt; margin-left:30.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0; padding-left:5.5pt; font-family:'Times New Roman'"> &nbsp; </li>
+                    </ol>
+                </td>
+                <td style="border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Scheme</span></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">${</span><span style="font-family:'Times New Roman'">Letter.scheme_desc}</span></p>
+                </td>
+            </tr>
+            <tr style="height:49.8pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <ol start="7" style="margin:0pt; padding-left:0pt">
+                        <li style="margin-right:22.5pt; margin-left:30.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0; padding-left:5.5pt; font-family:'Times New Roman'"> &nbsp; </li>
+                    </ol>
+                </td>
+                <td style="border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Purpose</span></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Borrower shall utilize the facility only for purchase of inventory from approved Anchor / OEM (Supplier) as mention above or as approved by InCred from time to time at its sole discretion.</span></p>
+                </td>
+            </tr>
+            <tr style="height:98.5pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <ol start="8" style="margin:0pt; padding-left:0pt">
+                        <li style="margin-right:22.5pt; margin-left:30.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0; padding-left:5.5pt; font-family:'Times New Roman'"> &nbsp; </li>
+                    </ol>
+                </td>
+                <td style="border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Revolving Tenure/</span></p>
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Tenure of each tranche</span></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <ol style="margin:0pt; padding-left:0pt">
+                        <li style="margin-left:30.5pt; margin-bottom:0pt; padding-left:5.5pt; font-family:'Times New Roman'">Extension of credit period from Anchor / OEM date of invoice / Draw Down Request (DDR) - maximum ${Letter.loan_tenure} days from date of Invoice.</li>
+                        <li style="margin-left:30.5pt; margin-bottom:0pt; padding-left:5.5pt; font-family:'Times New Roman'">Discounting of overdue invoices to be done at sole discretion of InCred</li>
+                        <li style="margin-left:30.5pt; margin-bottom:0pt; padding-left:5.5pt; font-family:'Times New Roman'"> Any tranche maturity date will not exceed the expiry date of the facility </li>
+                        <li style="margin-left:30.5pt; padding-left:5.5pt; font-family:'Times New Roman'">Each tranche disbursement to be repaid on or before the maturity date of the respective tranche.</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr style="height:25.5pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <ol start="9" style="margin:0pt; padding-left:0pt">
+                        <li style="margin-right:22.5pt; margin-left:30.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0; padding-left:5.5pt; font-family:'Times New Roman'"> &nbsp; </li>
+                    </ol>
+                </td>
+                <td style="border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Facility Tenure</span></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">${Letter.facility_tenure}</span><span style="font-family:'Times New Roman'"> Months (to be reviewed after ${Letter.facility_tenure} months or before that)</span></p>
+                </td>
+            </tr>
+            <tr style="height:33.5pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <ol start="10" style="margin:0pt; padding-left:0pt">
+                        <li style="margin-right:22.5pt; margin-left:35.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0; padding-left:0.5pt; font-family:'Times New Roman'"> &nbsp; </li>
+                    </ol>
+                </td>
+                <td style="border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Renewal of the facility</span></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">On or before ${Letter.facility_tenure} months form the date of this sanction letter on sole discretion of InCred (yearly renewal). In cases of non-renewal limit will be blocked</span></p>
+                </td>
+            </tr>
+            <tr style="height:98.75pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <ol start="11" style="margin:0pt; padding-left:0pt">
+                        <li style="margin-right:22.5pt; margin-left:35.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0; padding-left:0.5pt; font-family:'Times New Roman'"> &nbsp; </li>
+                    </ol>
+                </td>
+                <td style="border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Interest Rate (Annual)</span></p>
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><strong><span style="font-family:'Times New Roman'; ">(breakup</span></strong><strong><span style="font-family:'Times New Roman'; ">&nbsp; </span></strong><strong><span style="font-family:'Times New Roman'; ">between Principal and Interest)</span></strong></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Currently ${Letter.roi}% </span><span style="font-family:'Times New Roman'">p.a. subject to change as may be communicated by the Lender. </span></p>
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><strong><span style="font-family:'Times New Roman'; ">Principal -As per the respective tranche due amount</span></strong></p>
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><strong><span style="font-family:'Times New Roman'; ">Interest -</span></strong><span style="font-family:'Times New Roman'">Every end of the month interest would be debited to the borrower account on daily outstanding in the account including principal and interest. Interest is due immediately. However, borrower can pay this on or before 7th of ensuing month, after which delayed payment charges on</span>
+                        <span
+                            style="font-family:'Times New Roman'">&nbsp; </span><span style="font-family:'Times New Roman'">interest</span><span style="font-family:'Times New Roman'">&nbsp; </span><span style="font-family:'Times New Roman'">would be applied.</span><span style="font-family:'Times New Roman'">&nbsp; </span>
+                            <span
+                                style="font-family:'Times New Roman'">If overdue Interest is capitalised at contracted interest rate.</span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="height:25.6pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <ol start="12" style="margin:0pt; padding-left:0pt">
+                        <li style="margin-right:22.5pt; margin-left:35.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0; padding-left:0.5pt; font-family:'Times New Roman'"> &nbsp; </li>
+                    </ol>
+                </td>
+                <td style="border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><strong><span style="font-family:'Times New Roman'; ">Type of ROI</span></strong></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Fixed</span></p>
+                </td>
+            </tr>
+            <tr style="height:76.35pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <ol start="13" style="margin:0pt; padding-left:0pt">
+                        <li style="margin-right:22.5pt; margin-left:35.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0; padding-left:0.5pt; font-family:'Times New Roman'"> &nbsp; </li>
+                    </ol>
+                </td>
+                <td style="border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Principal Repayment Mode</span></p>
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Frequency of Repayment</span></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Direct Payment by the Borrower to the Lender on or before the tranche due date based on tranche tenure mention in clause no 8 through RTGS/NEFT/ NACH / Cheque or any other mode acceptable to lender.</span></p>
+                    <p
+                        style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                        <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">As per the respective tranche tenure and due date</span></p>
+                </td>
+            </tr>
+            <tr style="height:30.25pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <ol start="14" style="margin:0pt; padding-left:0pt">
+                        <li style="margin-right:22.5pt; margin-left:35.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0; padding-left:0.5pt; font-family:'Times New Roman'"> &nbsp; </li>
+                    </ol>
+                </td>
+                <td style="border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Interest Payment</span></p>
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Mode</span></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">NACH / Cheque/ RTGS/NEFT</span></p>
+                </td>
+            </tr>
+            <tr style="height:23.95pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <ol start="15" style="margin:0pt; padding-left:0pt">
+                        <li style="margin-right:22.5pt; margin-left:35.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0; padding-left:0.5pt; font-family:'Times New Roman'"> &nbsp; </li>
+                    </ol>
+                </td>
+                <td style="border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+                    <p style="widows:0; orphans:0"><strong><span style="font-family:'Times New Roman'; ">Late Payment charges in case of delayed payments/ non-compliance of material terms and conditions of loan (if any) and other charges ( as applicable)</span></strong></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><strong><span style="font-family:'Times New Roman'; ">Kindly refer the Schedule of Charges (SOC) annexed herewith/Annexure 2</span></strong></p>
+                </td>
+            </tr>
+            <tr style="height:53.3pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <ol start="16" style="margin:0pt; padding-left:0pt">
+                        <li style="margin-right:22.5pt; margin-left:35.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0; padding-left:0.5pt; font-family:'Times New Roman'"> &nbsp; </li>
+                    </ol>
+                </td>
+                <td style="border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">TDS Certificates Submission</span></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Borrower undertakes to submit TDS certificates on a Monthly or Quarterly basis. Credit against the same shall only be passed on receipt of duly signed certificates before the closure of Lender&apos;s accounting period. In case of delay, the Borrower shall be liable to pay the balance amount to the Lender.</span></p>
+                </td>
+            </tr>
+            <tr style="height:154.75pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <ol start="17" style="margin:0pt; padding-left:0pt">
+                        <li style="margin-right:22.5pt; margin-left:35.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0; padding-left:0.5pt; font-family:'Times New Roman'"> &nbsp; </li>
+                    </ol>
+                </td>
+                <td style="border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Disbursement</span></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-left:20pt; margin-bottom:0pt; text-indent:-20pt"><span style="font-family:'Times New Roman'">&bull;</span><span style="font-family:'Times New Roman'">&nbsp;&nbsp; </span><span style="font-family:'Times New Roman'">The disbursement under this Facility shall be done directly to Anchor /OEM against</span></p>
+                    <p
+                        style="margin-left:20pt; margin-bottom:0pt; text-indent:-20pt"><span style="font-family:'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:'Times New Roman'">disbursement request raised by Borrower or Anchor/OEM through Email/Online</span><span style="font-family:'Times New Roman'">&nbsp; </span></p>
+                        <p
+                            style="margin-left:20pt; margin-bottom:0pt; text-indent:-20pt"><span style="font-family:'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family:'Times New Roman'">System/Physical copy.</span></p>
+                            <p style="margin-bottom:0pt"><span style="font-family:'Times New Roman'">&bull;</span><span style="font-family:'Times New Roman'">&nbsp;&nbsp; </span></p>
+                            <p style="margin-left:26pt; margin-bottom:0pt; text-indent:-18pt"><span style="font-family:'Times New Roman'">15.</span><span style="width:5.5pt; font:7pt 'Times New Roman'; display:inline-block">&nbsp;&nbsp;&nbsp; </span><span style="font-family:'Times New Roman'">All obligations of Borrower to any Guarantor / Promoter / Related parties or any Affiliate of Borrower (other than amounts arising pursuant to the tax sharing agreement among the Companies and Parent) shall be subordinated in right of repayment to all obligations of Borrower to lender/InCred.</span></p>
+                            <p
+                                style="margin-bottom:0pt"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                                <p style="margin-left:26pt; margin-bottom:0pt; text-indent:-18pt"><span style="font-family:'Times New Roman'">16.</span><span style="width:5.5pt; font:7pt 'Times New Roman'; display:inline-block">&nbsp;&nbsp;&nbsp; </span><span style="font-family:'Times New Roman'">The Borrower /Guarantor/s hereby agrees &amp; gives consent to the Lender that in event of default by borrower on repayment of principal or interest, lender may inform to the borrower&rsquo;s Anchor / OEM and all other suppliers regarding the default and may request to do stop supply or further fresh billing to borrower.</span></p>
+                                <p
+                                    style="margin-left:8pt; margin-bottom:0pt"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                                    <p style="margin-left:26pt; margin-bottom:0pt; text-indent:-18pt"><span style="font-family:'Times New Roman'">17.</span><span style="width:5.5pt; font:7pt 'Times New Roman'; display:inline-block">&nbsp;&nbsp;&nbsp; </span><span style="font-family:'Times New Roman'">In order to remove any ambiguity, it is clarified that the intervals are intended to be continuous and accordingly, the basis for classification of SMA/NPA</span>
+                                        <span
+                                            style="font-family:'Times New Roman'">&nbsp; </span><span style="font-family:'Times New Roman'">categories shall be considered as follows:</span></p>
+                                    <p style="margin-bottom:0pt; line-height:normal"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                                    <p style="margin-bottom:0pt; line-height:normal"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                                    <table style="width:324.75pt; margin-left:26pt; margin-bottom:0pt; border:0.75pt solid #000000; border-collapse:collapse">
+                                        <tr>
+                                            <td style="padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+                                                <p style="margin-bottom:0pt; text-align:center; line-height:115%; widows:0; orphans:0; font-size:9pt"><strong><u><span style="font-family:'Times New Roman'; ">&ldquo;Example of SMA/NPA&rdquo;</span></u></strong></p>
+                                                <table style="width:304.05pt; margin-bottom:0pt; border:0.75pt solid #000000; border-collapse:collapse">
+                                                    <tr>
+                                                        <td style="border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+                                                            <p style="margin-bottom:0pt; line-height:115%; font-size:9pt"><strong><span style="font-family:'Times New Roman'; ">If the EMI /Tranche Amount/Interest is not paid within 30 days from the due date of repayment</span></strong></p>
+                                                        </td>
+                                                        <td style="border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+                                                            <p style="margin-bottom:0pt; text-align:center; line-height:115%; font-size:9pt"><strong><span style="font-family:'Times New Roman'; ">SMA-0</span></strong></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+                                                            <p style="margin-bottom:0pt; line-height:115%; font-size:9pt"><strong><span style="font-family:'Times New Roman'; ">If the EMI / Tranche Amount/Interest is not paid within 60 days from the due date of repayment</span></strong></p>
+                                                        </td>
+                                                        <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+                                                            <p style="margin-bottom:0pt; text-align:center; line-height:115%; font-size:9pt"><strong><span style="font-family:'Times New Roman'; ">SMA-1</span></strong></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+                                                            <p style="margin-bottom:0pt; line-height:115%; font-size:9pt"><strong><span style="font-family:'Times New Roman'; ">If the EMI / Tranche Amount/Interest is not paid within 90 days from the due date of repayment</span></strong></p>
+                                                        </td>
+                                                        <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+                                                            <p style="margin-bottom:0pt; text-align:center; line-height:115%; font-size:9pt"><strong><span style="font-family:'Times New Roman'; ">SMA-2</span></strong></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+                                                            <p style="margin-bottom:0pt; line-height:115%; font-size:9pt"><strong><span style="font-family:'Times New Roman'; ">If the EMI / Tranche Amount/Interest is not paid for more than 90 days from the due date of repayment</span></strong></p>
+                                                        </td>
+                                                        <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+                                                            <p style="margin-bottom:0pt; text-align:center; line-height:115%; font-size:9pt"><strong><span style="font-family:'Times New Roman'; ">NPA</span></strong></p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <p style="margin-bottom:0pt"></p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <p style="margin-left:26pt; margin-bottom:0pt"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                                    <p style="margin-left:26pt; margin-bottom:0pt"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                                    <p style="margin-left:36pt; margin-bottom:0pt; text-indent:-18pt"><span style="font-family:'Times New Roman'">18.</span><span style="width:5.5pt; font:7pt 'Times New Roman'; display:inline-block">&nbsp;&nbsp;&nbsp; </span><span style="font-family:'Times New Roman'">Borrower have read and understood the terms and conditions of the Loan including the annual rate of interest and the approach for gradation of risk and rationale for charging different rates of interest to different categories of borrowers adopted by the Lender(s). The Borrower understand the Lender (s) has its own model for arriving at lending interest rates on the basis of</span>
+                                        <span
+                                            style="font-family:'Times New Roman'">&nbsp; </span><span style="font-family:'Times New Roman'">various (i) risks such as interest rate risk, credit</span><span style="font-family:'Times New Roman'">&nbsp; </span><span style="font-family:'Times New Roman'">and default risk in the related business segment, (ii)based on various cost such as</span>
+                                            <span
+                                                style="font-family:'Times New Roman'">&nbsp; </span><span style="font-family:'Times New Roman'">average cost of borrowed funds, matching tenure cost ,market liquidity, cost of underwriting, cost of customer acquisition etc. and other factors like profile of the borrower, repayment track record of the existing customer, future potential, deviations permitted , tenure of relationship with the borrower, overall</span>
+                                                <span
+                                                    style="font-family:'Times New Roman'">&nbsp; </span><span style="font-family:'Times New Roman'">customer yield etc. Such information is gathered based on the information provided by the borrower, credit reports, data sources and market intelligence. The Borrower accept the terms and conditions and agree that these terms and conditions may be changed by the Lender at any time, and the Borrower shall be bound by the amended terms and conditions.</span></p>
+                                    <p
+                                        style="margin-left:36pt; margin-bottom:0pt"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                                        <p style="margin-left:36pt; margin-bottom:0pt; text-indent:-18pt"><span style="font-family:'Times New Roman'">19.</span><span style="width:5.5pt; font:7pt 'Times New Roman'; display:inline-block">&nbsp;&nbsp;&nbsp; </span><span style="font-family:'Times New Roman'">InCred reserves the right to change the rate of interest and other charges, at</span>
+                                            <span
+                                                style="font-family:'Times New Roman'">&nbsp;&nbsp; </span><span style="font-family:'Times New Roman'">any time, with previous notice/intimation, and any such changes shall have prospective effect.</span></p>
+                                        <p style="margin-left:36pt; margin-bottom:0pt"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                                        <p style="margin-left:36pt; margin-bottom:0pt; text-indent:-18pt"><strong><span style="font-family:'Times New Roman'; ">20.</span></strong><span style="width:5.5pt; font:7pt 'Times New Roman'; display:inline-block">&nbsp;&nbsp;&nbsp; </span><span style="font-family:'Times New Roman'">Lender shall give communication to the Borrower of any change in the terms and conditions including the disbursement schedule, Rate of Interest, service charges, prepayment charges and also notify such changes by updating the same on its Website, wherever applicable. The Borrower hereby also agrees to keep himself/herself/itself abreast with all notifications on the Website and shall be bound by the aforesaid change and shall not dispute the same. Notwithstanding the above, the Borrowers agree that Rate of Interest may increase on account of directives/guidelines issued by the RBI, statutory authority and in that case, the Borrowers agree and undertake to pay such revised rate of interest</span></p>
+                                        <p
+                                            style="margin-left:36pt; margin-bottom:0pt; text-indent:-18pt"><strong><span style="font-family:'Times New Roman'; ">21.</span></strong><span style="width:5.5pt; font:7pt 'Times New Roman'; display:inline-block">&nbsp;&nbsp;&nbsp; </span><strong><span style="font-family:'Times New Roman'; ">In term of the RBI guidelines, if your aggregate exposure from the banking sector (all Banks/FIs/NBFCs) is more than INR 5 cr, kindly get yourself registered and obtain Legal Entity Identifier (LEI) codes and share with us..</span></strong><strong><span style="font-family:'Times New Roman'; ">&nbsp;</span></strong><strong><span style="font-family:'Times New Roman'; ">&ldquo;Exposure&rdquo; for this purpose shall include all fund based and non-fund based (credit as well as investment) exposure of banks/FIs to the borrower. Aggregate sanctioned limit or outstanding balance, whichever is higher, shall be reckoned for the purposes. In the absence of the same no fresh exposure including renewal/review would be taken wef May 01, 2023 if the aggregate exposure is over INR 25 cr, wef May 01, 2024 if the aggregate exposure is over INR 10 cr and wef May 01, 2025 if the aggregate exposure is over INR 5 cr.</span></strong></p>
+                </td>
+            </tr>
+            <tr style="height:364.55pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <ol start="25" style="margin:0pt; padding-left:0pt">
+                        <li style="margin-right:22.5pt; margin-left:35.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0; padding-left:0.5pt; font-family:'Times New Roman'"> &nbsp; </li>
+                    </ol>
+                </td>
+                <td style="border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="widows:0; orphans:0"><span style="font-family:'Times New Roman'">Credit Information Exchange (CIBIL )General disclosure Information and other Covenants</span></p>
+                    <p style="widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="text-align:justify; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                    <p style="text-align:justify; widows:0; orphans:0"><span style="font-family:'Times New Roman'">The Borrower /Guarantor/s hereby agrees &amp; gives consent for the disclosures by the Lender of all or any such:</span></p>
+                    <ol class="awlist1" style="margin:0pt; padding-left:0pt">
+                        <li style="margin-left:35.3pt; margin-bottom:0pt; text-indent:-22.5pt; font-family:'Times New Roman'"><span style="width:14.73pt; font:7pt 'Times New Roman'; display:inline-block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Information &amp; data relating to the Borrower;</li>
+                        <li style="margin-left:35.3pt; margin-bottom:0pt; text-indent:-22.5pt; font-family:'Times New Roman'"><span style="width:14.17pt; font:7pt 'Times New Roman'; display:inline-block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Information and data relating to any credit or&nbsp;&nbsp; loan availed/ to be made available
+                            by the Borrower and data relating to the Borrower/Guarantor;</li>
+                        <li style="margin-left:35.3pt; margin-bottom:0pt; text-indent:-22.5pt; font-family:'Times New Roman'"><span style="width:14.73pt; font:7pt 'Times New Roman'; display:inline-block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Obligations assumed/to be assumed by the Borrower in relation to the Credit Facility(ics);</li>
+                        <li
+                            style="margin-left:35.3pt; margin-bottom:0pt; text-indent:-22.5pt; font-family:'Times New Roman'"><span style="width:14.17pt; font:7pt 'Times New Roman'; display:inline-block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Default if any, committed by the borrower in discharge of the Borrower&apos;s obligations
+                            hereunder or under any Transaction Documents, as the Lender may deem appropriate and necessary, disclose and furnish to Credit Information Companies (Credit Information Bureau Limited (&quot;CIBIL&quot;) )or any other agency
+                            authorized by Reserve Bank of India (&quot;RBI&quot;) in this behalf.</li>
+                            <li style="margin-left:35.3pt; margin-bottom:0pt; text-indent:-22.5pt; font-family:'Times New Roman'"><span style="width:14.73pt; font:7pt 'Times New Roman'; display:inline-block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>That in event of any account being reported under SMA category by any of the lender
+                                to RBI, borrower shall repay the entire dues payable to InCred</li>
+                            <li style="margin-top:12pt; margin-left:35.3pt; text-indent:-22.5pt; text-align:justify; line-height:normal; widows:0; orphans:0; font-family:'Times New Roman'"><span style="width:15.84pt; font:7pt 'Times New Roman'; display:inline-block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> They would take written consent from InCred before availing any additional funding
+                                from Bank/FI</li>
+                    </ol>
+                    <p style="margin-top:12pt; text-align:justify; widows:0; orphans:0"><span style="font-family:'Times New Roman'">The Borrower declares that the information and data furnished by the Borrower to the Lender are true and correct.</span></p>
+                    <p style="margin-top:12pt; text-align:justify; widows:0; orphans:0"><span style="font-family:'Times New Roman'">The Borrower undertakes that CIBIL or any other agency so authorized may use/process the said in formation and data disclosed by the Lender in the manner as may be deemed fit by them. CIBIL or any other agency so authorized may furnish for consideration the processed information, data and products thereof prepared by them to banks, Financial Institutions (&quot;FIs&quot;) or other credit granters or registered users as may be specified by RBI in this behalf.</span></p>
+                </td>
+            </tr>
+            <tr style="height:141.45pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <ol start="26" style="margin:0pt; padding-left:0pt">
+                        <li style="margin-right:22.5pt; margin-left:35.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0; padding-left:0.5pt; font-family:'Times New Roman'"> &nbsp; </li>
+                    </ol>
+                </td>
+                <td style="border:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Cancellation of Facility</span></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <p style="text-align:justify; widows:0; orphans:0"><span style="font-family:'Times New Roman'">The Lender shall have a right to unconditionally cancel the Facility:</span></p>
+                    <ol class="awlist2" style="margin:0pt; padding-left:0pt">
+                        <li style="margin-left:18pt; margin-bottom:0pt; text-indent:-18pt; font-family:'Times New Roman'"><span style="width:10.23pt; font:7pt 'Times New Roman'; display:inline-block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>In case the limits/parts of the limits are not utilized by the Borrower, and /or</li>
+                        <li style="margin-left:18pt; margin-bottom:0pt; text-indent:-18pt; font-family:'Times New Roman'"><span style="width:9.67pt; font:7pt 'Times New Roman'; display:inline-block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>In case of deterioration in the Facility accounts in any manner whatsoever; and/or</li>
+                        <li style="margin-left:18pt; margin-bottom:0pt; text-indent:-18pt; font-family:'Times New Roman'"><span style="width:10.23pt; font:7pt 'Times New Roman'; display:inline-block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>In case of non-compliance of terms and conditions of sanction.</li>
+                    </ol>
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Notwithstanding the above. the Lender without assuming any liability shall be entitled to revoke, cancel, alter, modify or change at any time any of the facilities sanctioned at its sole discretion without assigning any reason for the same. Likewise, Lender shall be entitled to alter, modify or change at any time any of the terms and conditions of the sanction at its sole discretion without assigning any reasons.</span></p>
+                </td>
+            </tr>
+            <tr style="height:37.85pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:middle">
+                    <ol start="27" style="margin:0pt; padding-left:0pt">
+                        <li style="margin-right:22.5pt; margin-left:35.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0; padding-left:0.5pt; font-family:'Times New Roman'"> &nbsp; </li>
+                    </ol>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Expenses</span></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">The Borrower shall bear all costs, expenses, and charges in relation to the Facility including but not limited to the payment of relevant stamp duty and registration charges for Facility / Security documents.</span></p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- ANNEXURE 2-->
+    <div>
+        <p style="margin-right:22.5pt; margin-left:18pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+        <p style="margin-right:22.5pt; margin-left:18pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+        <p style="margin-left:144pt; text-indent:36pt"><strong>&nbsp;</strong></p>
+        <p style="margin-left:144pt; text-indent:36pt"><strong>&nbsp;</strong></p>
+        <p style="margin-left:144pt; text-indent:36pt"><strong>&nbsp;</strong></p>
+        <p style="margin-left:144pt; text-indent:36pt"><strong>&nbsp;</strong></p>
+        <p style="margin-left:144pt; text-indent:36pt"><strong>ANNEXURE 2 -SCHEDULE OF CHARGES</strong></p>
+        <table style="width:567.75pt; margin-left:9pt; margin-bottom:1.5rem; border:0.75pt solid #000000; border-collapse:collapse">
+            <tr style="height:26.25pt">
+                <td style="border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:middle">
+                    <p style="margin-top:12pt; margin-left:16pt; margin-bottom:12pt; text-align:center"><strong><span style="font-family:'Times New Roman'; ">Sr No</span></strong></p>
+                </td>
+                <td style="border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:middle">
+                    <p style="margin-top:1pt; margin-right:77pt; text-align:center"><strong><span style="font-family:'Times New Roman'; ">Charge Type </span></strong></p>
+                </td>
+                <td style="border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:middle">
+                    <p style="margin-top:12pt; margin-right:7.85pt; margin-bottom:12pt; text-align:center"><strong><span style="font-family:'Times New Roman'; ">Charges (As applicable)</span></strong></p>
+                </td>
+            </tr>
+            <tr style="height:26.25pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-left:10pt; margin-bottom:12pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">1</span></strong></p>
+                </td>
+                <td style="border:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-right:3pt; margin-left:11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">Processing Fees, Documentation Fee as stated in the loan documents</span></strong></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-right:7.85pt; margin-left:6.4pt; margin-bottom:0pt; text-align:justify; line-height:normal; widows:0; orphans:0; font-size:12pt"><strong><span style="font-family:'Times New Roman'; font-size:10pt; ">${Letter.management_fee} </span></strong><strong><span style="font-family:'Times New Roman'; font-size:10pt; ">% (non-refundable) plus applicable taxes to be paid upfront at the time of acceptance of the Sanction Letter</span></strong><strong><span style="font-family:'Times New Roman'; ">. </span></strong></p>
+                    <p
+                        style="margin-top:7pt; margin-right:7.85pt; margin-left:6.4pt; text-align:justify"><span style="font-family:'Times New Roman'">(If there are any changes in the Government Tax at the time of payment of the processing Fee, the Borrower will have to bear the impact of the change.)</span></p>
+                </td>
+            </tr>
+            <tr style="height:32.25pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-left:10pt; margin-bottom:12pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">2</span></strong></p>
+                </td>
+                <td style="border:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-right:11pt; margin-left:11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">Legal and Technical Charges per property being mortgaged as security for the loan/ facility</span></strong></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-right:7.85pt; margin-left:11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">As per Actuals +applicable Taxes</span></strong></p>
+                </td>
+            </tr>
+            <tr style="height:34.5pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-left:10pt; margin-bottom:12pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">3</span></strong></p>
+                </td>
+                <td style="border:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-right:14pt; margin-left:11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">Swap Charges (Repayment due date, Bank a/c change, Repayment mode change)</span></strong></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-right:7.85pt; margin-left:11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">Rs.2,500 + applicable Taxes</span></strong></p>
+                </td>
+            </tr>
+            <tr style="height:51.75pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-left:10pt; margin-bottom:12pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">4</span></strong></p>
+                </td>
+                <td style="border:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-left:11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">Late Payment Charges (LPP) -</span></strong></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-right:7.85pt; margin-left:11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">12% per annum + Applicable GST (excluding the regular rate of interest as mentioned above) in case any tranche and interest remains unpaid after the due date.</span></strong><strong><span style="font-family:'Times New Roman'; color:#231f20">Late</span></strong><strong></strong><strong><span style="font-family:'Times New Roman'; color:#231f20">payment to be charged for the relevant amount for such overdue period till actual payment of such amount</span></strong></p>
+                </td>
+            </tr>
+            <tr style="height:39pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:12pt; margin-left:10pt; margin-bottom:12pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">5</span></strong></p>
+                </td>
+                <td style="border:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-right:8pt; margin-left:11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">Part Prepayment Charges and Full Prepayment / Foreclosure Charges</span></strong></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-right:7.85pt; margin-left:11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">Upto 4% if payment is done by through other bank or financial institutions by way of balance transfer + Applicable Taxes</span></strong></p>
+                </td>
+            </tr>
+            <tr style="height:13.5pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-left:10pt; margin-bottom:12pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">6</span></strong></p>
+                </td>
+                <td style="border:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-left:10pt; margin-bottom:12pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">NACH/ PDC bounce / dishonour charges</span></strong></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-right:7.85pt; margin-left:11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">Rs.1,000 per instance</span></strong></p>
+                </td>
+            </tr>
+            <tr style="height:51.75pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-left:10pt; margin-bottom:12pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">7</span></strong></p>
+                </td>
+                <td style="border:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-right:2pt; margin-left:11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">Stamp Duty, Registration Charges, Taxes and other related charges on the Loan Documents, Mortgage Documents, Notice of Intimation (NOI),</span></strong></p>
+                    <p style="margin-left:11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">Security Documents etc.</span></strong></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-right:7.85pt; margin-left:11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">At Actuals +_applicable Taxes</span></strong></p>
+                </td>
+            </tr>
+            <tr style="height:27pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:12pt; margin-left:10pt; margin-bottom:12pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">8</span></strong></p>
+                </td>
+                <td style="border:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-right:11pt; margin-left:11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">CERSAI/CKYC/NESL/ RoC Registration Charges etc.</span></strong></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin:12pt 7.85pt 12pt 11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">At Actuals +_applicable Taxes</span></strong></p>
+                </td>
+            </tr>
+            <tr style="height:13.5pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-left:10pt; margin-bottom:12pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">9</span></strong></p>
+                </td>
+                <td style="border:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-left:10pt; margin-bottom:12pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">List of Title Documents (LOD) Charges</span></strong></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin:1pt 7.85pt 12pt 10pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">Rs.100 + applicable Taxes</span></strong></p>
+                </td>
+            </tr>
+            <tr style="height:14.25pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top; width: 42px;">
+                    <p style="margin-top:12pt; margin-left:10pt; margin-bottom:12pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">10</span></strong></p>
+                </td>
+                <td style="border:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:12pt; margin-left:11pt; margin-bottom:12pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">Retrieval of Copies of the Documents</span></strong></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin:12pt 7.85pt 12pt 11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">Rs.1,000 + applicable Taxes</span></strong></p>
+                </td>
+            </tr>
+            <tr style="height:65.25pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:12pt; margin-left:10pt; margin-bottom:12pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">11</span></strong></p>
+                </td>
+                <td style="border:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-right:12pt; margin-left:11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">Charges for Delay in submission/ compliance of Security /Post Disbursal Documents for over 90 days</span></strong></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-right:7.85pt; margin-left:11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">Per Month Rs 10,000 for Critical documents/ Compliances and Rs 5,000 for non-Critical documents/ Compliances - as per internal legal norms and communicated to the customer from</span></strong></p>
+                    <p
+                        style="margin-right:7.85pt; margin-left:11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">time to time +_applicable Taxes</span></strong></p>
+                </td>
+            </tr>
+            <tr style="height:26.25pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-left:10pt; margin-bottom:12pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">12</span></strong></p>
+                </td>
+                <td style="border:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-left:11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">Charges towards Legal Notice</span></strong></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-right:7.85pt; margin-left:11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">Rs.1000 per notice and Rs.75 per additional address. +applicable Taxes</span></strong></p>
+                </td>
+            </tr>
+            <tr style="height:14.25pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:12pt; margin-left:10pt; margin-bottom:12pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">13</span></strong></p>
+                </td>
+                <td style="border:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:12pt; margin-left:11pt; margin-bottom:12pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">Charges towards SARFAESI actions</span></strong></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin:12pt 7.85pt 12pt 11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">At Actuals +applicable Taxes</span></strong></p>
+                </td>
+            </tr>
+            <tr style="height:14.25pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-left:10pt; margin-bottom:12pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">14</span></strong></p>
+                </td>
+                <td style="border:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-left:11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">Charges towards Arbitration</span></strong></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-right:7.85pt; margin-left:11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">At Actuals +applicable Taxes</span></strong></p>
+                </td>
+            </tr>
+            <tr style="height:13.5pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-left:10pt; margin-bottom:12pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">15</span></strong></p>
+                </td>
+                <td style="border:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-left:11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">Charges towards Insolvency Proceedings</span></strong></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-right:7.85pt; margin-left:11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">At Actuals +applicable Taxes</span></strong></p>
+                </td>
+            </tr>
+            <tr style="height:54.75pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:12pt; margin-left:10pt; margin-bottom:12pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">16</span></strong></p>
+                </td>
+                <td style="border:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:12pt; margin-left:11pt; margin-bottom:12pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">Charges towards Section 138 / Section 25</span></strong></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-right:7.85pt; margin-left:11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">Rs.4,000 + applicable Taxes towards legal proceeding under Negotiable Instrument Act, 1881 (Sec.138) and Payment of Settlement Act 2007 (Sec.25)</span></strong></p>
+                </td>
+            </tr>
+            <tr style="height:39pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:12pt; margin-left:10pt; margin-bottom:12pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">17</span></strong></p>
+                </td>
+                <td style="border:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-right:9pt; margin-left:11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">Other facility charges as applicable from time to time due to govt. regulation/ incidental charges incurred by the Lender</span></strong></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; border-bottom:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-right:7.85pt; margin-left:11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">To be specified and communicated by the Lender from time to time</span></strong></p>
+                </td>
+            </tr>
+            <tr style="height:39pt">
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:12pt; margin-left:10pt; margin-bottom:12pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">18</span></strong></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-right:29pt; margin-left:11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">Other Penal Charges for non-compliance of material obligations if any with prior communication</span></strong></p>
+                </td>
+                <td style="border-top:0.75pt solid #000000; border-left:0.75pt solid #000000; padding:0.75pt 0.38pt; vertical-align:top">
+                    <p style="margin-top:1pt; margin-right:7.85pt; margin-left:11pt; text-align:justify"><strong><span style="font-family:'Times New Roman'; ">To be specified and communicated by the Lender from time to time</span></strong></p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- END ANNEXURE 2-->
+    <p style="margin-right:22.5pt; margin-left:18pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+    <p style="margin-right:22.5pt; margin-left:18pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+    <div>
+        <table style="width:547.8pt; margin-right:9pt; margin-left:9pt; margin-bottom:0pt; border-collapse:collapse">
+            <tr>
+                <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                    <p style="text-align:justify; widows:0; orphans:0"><strong><span style="font-family:'Times New Roman'; ">Rate of interest (invoice discounting consideration) may vary as per market condition and will be decided by the Lender. Validity of the offer is 30 (thirty) days from the date of this letter.</span></strong></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                    <p style="text-align:justify; widows:0; orphans:0"><span style="font-family:'Times New Roman'">We request you to kindly return the duplicate copy of this Sanction Letter, dully signed as a token of your acceptance, supported by certified copies of the resolution dully passed by the Board of Directors along with relevant resolutions of the shareholders under section 180(I) (a) and 180 (I)(c) of the Companies Act, 2013, as applicable, for acceptance of the said Facility.</span></p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <table style="width:555.15pt; margin-bottom:0pt; border-collapse:collapse">
+            <tr style="height:16.85pt">
+                <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                    <p style="text-align:justify; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Yours Faithfully,</span></p>
+                </td>
+            </tr>
+            <tr style="height:16.3pt">
+                <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                    <p style="text-align:justify; widows:0; orphans:0"><span style="font-family:'Times New Roman'">For InCred Financial Services Ltd.</span></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                    <p style="text-align:justify; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div style="margin-bottom: 34rem">
+        <p style="margin-right:22.5pt; margin-bottom:0pt; text-align:justify; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+        <table style="width:555.15pt; margin-bottom:0pt; border-collapse:collapse">
+            <tr style="height:19.75pt">
+                <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                    <p style="text-align:justify; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                </td>
+                <td rowspan="5" style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top; width: 50%">
+                    <p style="margin-bottom:0pt; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                    <table style="width:275.65pt; margin-bottom:0pt; border-collapse:collapse">
+                        <tr style="height:23.8pt">
+                            <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                            </td>
+                        </tr>
+                        <tr style="height:112.4pt">
+                            <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:middle">
+                                <p style="text-align:justify; widows:0; orphans:0"><span style="font-family:'Times New Roman'">We Acknowledge the contents of this offer and we are agreeable to the terms and condition laid herein:</span></p>
+                                <p style="text-align:justify; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                                <p style="text-align:justify; widows:0; orphans:0"><span style="font-family:'Times New Roman'">For ${</span><strong><span style="font-family:'Times New Roman'; ">Letter.CUSTOMER_NAME</span></strong><span style="font-family:'Times New Roman'">}</span></p>
+                                <p style="text-align:justify; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                                <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Authorized Signatory</span></p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p style="margin-right:22.5pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"></p>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                    <p style="text-align:justify; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+                </td>
+            </tr>
+            <tr style="height:68.1pt">
+                <td style="padding-right:5.4pt; padding-left:5.4pt; vertical-align:top">
+                    <p style="text-align:justify; widows:0; orphans:0"><span style="font-family:'Times New Roman'">Authorized Signatory</span></p>
+                </td>
+            </tr>
+        </table>
+        <p style="margin-right:22.5pt; margin-left:18pt; margin-bottom:0pt; line-height:normal; widows:0; orphans:0"><span style="font-family:'Times New Roman'">&nbsp;</span></p>
+    </div>
+</div>
+<div class="footer">
+    <p style="text-align:justify; line-height:normal;margin-left:9pt;">&ldquo;I/we accept all the terms and conditions which have been and understand by me/us&rdquo;</p>
+    <table style="width:564.15pt; margin-left:9pt; margin-bottom:0pt; border:0.75pt solid #000000; border-collapse:collapse">
+        <tr style="height:71.8pt">
+            <td style="border-right:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+                <p style="margin-bottom:0pt; text-align:justify; line-height:normal; widows:0; orphans:0"> Borrower </p>
+                <p style="margin-bottom:0pt; text-align:justify; line-height:normal; widows:0; orphans:0"> &nbsp; </p>
+                <p style="margin-bottom:0pt; text-align:justify; line-height:normal; widows:0; orphans:0"> &nbsp; </p>
+                <p style="line-height:115%; font-size:9pt"> &nbsp; </p>
+                <p style="line-height:115%; font-size:9pt"> Authorized signatory </p>
+            </td>
+            <td style="border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+                <p style="line-height:115%; font-size:9pt"> &nbsp; </p>
+                <p style="margin-bottom:0pt; text-align:justify; line-height:normal; widows:0; orphans:0"> &nbsp; </p>
+                <p style="margin-bottom:0pt; text-align:justify; line-height:normal; widows:0; orphans:0"> &nbsp; </p>
+                <p style="margin-bottom:0pt; text-align:justify; line-height:normal; widows:0; orphans:0"> &nbsp; </p>
+                <p style="line-height:normal; font-size:9pt"> Guarantor 1 </p>
+            </td>
+            <td style="border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+                <p style="line-height:115%; font-size:9pt"> &nbsp; </p>
+                <p style="margin-bottom:0pt; text-align:justify; line-height:normal; widows:0; orphans:0"> &nbsp; </p>
+                <p style="margin-bottom:0pt; text-align:justify; line-height:normal; widows:0; orphans:0"> &nbsp; </p>
+                <p style="margin-bottom:0pt; text-align:justify; line-height:normal; widows:0; orphans:0"> &nbsp; </p>
+                <p style="line-height:115%; font-size:9pt"> Guarantor 2 </p>
+            </td>
+            <td style="border-right:0.75pt solid #000000; border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+                <p style="margin-bottom:0pt; text-align:justify; line-height:normal; widows:0; orphans:0"> &nbsp; </p>
+                <p style="margin-bottom:0pt; text-align:justify; line-height:normal; widows:0; orphans:0"> &nbsp; </p>
+                <p style="margin-bottom:0pt; text-align:justify; line-height:normal; widows:0; orphans:0"> &nbsp; </p>
+                <p style="line-height:115%; font-size:9pt"> &nbsp; </p>
+                <p style="line-height:115%; font-size:9pt"> Guarantor 3 </p>
+            </td>
+            <td style="border-left:0.75pt solid #000000; padding-right:5.03pt; padding-left:5.03pt; vertical-align:top">
+                <p style="line-height:115%; font-size:9pt"> &nbsp; </p>
+                <p style="margin-bottom:0pt; text-align:justify; line-height:normal; widows:0; orphans:0"> &nbsp; </p>
+                <p style="margin-bottom:0pt; text-align:justify; line-height:normal; widows:0; orphans:0"> &nbsp; </p>
+                <p style="margin-bottom:0pt; text-align:justify; line-height:normal; widows:0; orphans:0"> &nbsp; </p>
+                <p style="line-height:115%; font-size:9pt"> Guarantor 4 </p>
+            </td>
+        </tr>
+    </table>
+    <p style="line-height:115%; font-size:9pt"> &nbsp; </p>
+</div>
+</body>
+</html>
